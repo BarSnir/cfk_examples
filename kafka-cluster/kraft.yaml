@@ -9,6 +9,8 @@ spec:
     application: confluentinc/cp-server:7.5.0
     init: confluentinc/confluent-for-kubernetes:2.9.0 # וודא שזה תואם ל-Operator
   dataVolumeCapacity: 1Gi
+  kraft:
+    enabled: true
   configOverrides:
     server:
       - "process.roles=broker,controller"
