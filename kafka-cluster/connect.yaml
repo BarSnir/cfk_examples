@@ -4,15 +4,15 @@ metadata:
   name: connect
   namespace: confluent
 spec:
-  replicas: 3
+  replicas: 1
   image:
     application: confluentinc/cp-server-connect:7.9.0
     init: confluentinc/confluent-init-container:2.11.1
   resources:
       requests:
-        memory: "1Gi"
+        memory: "2Gi"
       limits:
-        memory: "1Gi"
+        memory: "4Gi"
   dependencies:
     kafka:
       bootstrapEndpoint: kafka:9071
