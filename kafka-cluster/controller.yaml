@@ -8,4 +8,4 @@ spec:
   dataVolumeCapacity: 1Gi
   image:
     application: confluentinc/cp-server:7.9.0
-    init: confluentinc/confluent-operator:0.1351.59
+    init: confluentinc/confluent-for-kubernetes:2.9.0
