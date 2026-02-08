@@ -9,8 +9,10 @@ spec:
     application: confluentinc/cp-server-connect:7.9.0
     init: confluentinc/confluent-init-container:2.11.1
   resources:
+      requests:
+        memory: "1Gi"
       limits:
-        memory: 4Gi
+        memory: "1Gi"
   dependencies:
     kafka:
       bootstrapEndpoint: kafka:9071
