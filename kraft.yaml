@@ -1,0 +1,16 @@
+apiVersion: platform.confluent.io/v1beta1
+kind: Kafka
+metadata:
+  name: kafka
+  namespace: confluent
+spec:
+  replicas: 1
+  image:
+    application: confluentinc/cp-server:7.5.0
+    init: confluentinc/confluent-for-kubernetes:2.9.0 # וודא שזה תואם ל-Operator
+  dataVolumeCapacity: 1Gi
+  configOverrides:
+    server:
+      - "process.roles=broker,controller"
+      - "controller.listener.names=CONTROLLER"
+      - "controller.quorum.voters=0@kafka-0.kafka.confluent.svc.cluster.local:9093"
