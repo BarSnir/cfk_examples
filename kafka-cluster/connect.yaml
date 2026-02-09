@@ -10,7 +10,7 @@ spec:
     init: confluentinc/confluent-init-container:2.11.1
   resources:
       requests:
-        memory: "4Gi"
+        memory: "512Gi"
       limits:
         memory: "4Gi"
   dependencies:
