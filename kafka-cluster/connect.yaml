@@ -10,7 +10,7 @@ spec:
     init: confluentinc/confluent-init-container:2.11.1
   resources:
       requests:
-        memory: "2Gi"
+        memory: "4Gi"
       limits:
         memory: "4Gi"
   dependencies:
@@ -18,4 +18,4 @@ spec:
       bootstrapEndpoint: kafka:9071
   configOverrides:
       server:
-        - KAFKA_HEAP_OPTS=-Xms512Mi -Xmx4G
+        - KAFKA_HEAP_OPTS=-Xms512Mi -Xmx4Gi
